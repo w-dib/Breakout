@@ -1,17 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://swrjp0de5tuv"]
+[gd_scene load_steps=4 format=3 uid="uid://swrjp0de5tuv"]
 
+[ext_resource type="Script" path="res://scenes/padel.gd" id="1_db17e"]
 [ext_resource type="Texture2D" uid="uid://3kf7vef41iip" path="res://assets/BreakOut Assets.png" id="1_wsepg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ysdvd"]
-size = Vector2(40, 16)
+size = Vector2(60, 16)
 
 [node name="Padel" type="CharacterBody2D"]
 scale = Vector2(1.5, 1.5)
+script = ExtResource("1_db17e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ysdvd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1)
 texture = ExtResource("1_wsepg")
 region_enabled = true
 region_rect = Rect2(84, 192, 40, 16)
