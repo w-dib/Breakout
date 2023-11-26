@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dr0vownuj1cnf"]
+[gd_scene load_steps=11 format=3 uid="uid://dr0vownuj1cnf"]
 
 [ext_resource type="PackedScene" uid="uid://swrjp0de5tuv" path="res://scenes/padel.tscn" id="1_0btgy"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_he8y8"]
@@ -6,7 +6,6 @@
 [ext_resource type="FontFile" uid="uid://cractp48e1agh" path="res://fonts/Kenney Future.ttf" id="3_wndot"]
 [ext_resource type="PackedScene" uid="uid://37jslufmn432" path="res://scenes/ball.tscn" id="4_m4rf1"]
 [ext_resource type="PackedScene" uid="uid://ccpfcau81k1ro" path="res://scenes/brick.tscn" id="5_bgcv6"]
-[ext_resource type="Texture2D" uid="uid://dfhomcmw6mp2d" path="res://assets/restart.png" id="5_fl1bp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a4xf5"]
 texture = ExtResource("1_nbyif")
@@ -327,46 +326,6 @@ theme_override_fonts/font = ExtResource("3_wndot")
 theme_override_font_sizes/font_size = 30
 text = "SCORE: 0"
 
-[node name="Gameover" type="Label" parent="GUI"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -107.5
-offset_top = -19.0
-offset_right = 107.5
-offset_bottom = 19.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_wndot")
-theme_override_font_sizes/font_size = 50
-text = "GAME OVER
-PRESS BELOW 
-TO RESTART"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Restart" type="TextureButton" parent="GUI"]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.75
-anchor_right = 0.5
-anchor_bottom = 0.8
-offset_left = -249.5
-offset_top = -249.5
-offset_right = 249.5
-offset_bottom = 249.5
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.25, 0.25)
-pivot_offset = Vector2(249, 249)
-texture_normal = ExtResource("5_fl1bp")
-
 [node name="Boundaries" type="Node" parent="."]
 
 [node name="Upperwall" type="StaticBody2D" parent="Boundaries"]
@@ -378,7 +337,7 @@ collision_mask = 9
 position = Vector2(30, 0)
 shape = SubResource("RectangleShape2D_ma5od")
 
-[node name="LowerWall" type="Area2D" parent="Boundaries"]
+[node name="LowerWall" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(480, 610)
 collision_layer = 2
 collision_mask = 9
@@ -406,6 +365,8 @@ shape = SubResource("RectangleShape2D_mjh1p")
 
 [node name="Ball" parent="." instance=ExtResource("4_m4rf1")]
 position = Vector2(450, 300)
+initial_ball_speed = null
+speed_multiplier = null
 
 [node name="Bricks" type="Node" parent="."]
 
@@ -715,9 +676,6 @@ position = Vector2(848, 272)
 
 [node name="Sprite2D" parent="Bricks/Yellow/Brick11" index="1"]
 region_rect = Rect2(0, 16, 16, 8)
-
-[connection signal="pressed" from="GUI/Restart" to="." method="_on_restart_pressed"]
-[connection signal="body_entered" from="Boundaries/LowerWall" to="." method="_on_lower_wall_body_entered"]
 
 [editable path="Bricks/Red/Brick"]
 [editable path="Bricks/Red/Brick2"]
