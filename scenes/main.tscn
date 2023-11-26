@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dr0vownuj1cnf"]
+[gd_scene load_steps=10 format=3 uid="uid://dr0vownuj1cnf"]
 
 [ext_resource type="PackedScene" uid="uid://swrjp0de5tuv" path="res://scenes/padel.tscn" id="1_0btgy"]
 [ext_resource type="Texture2D" uid="uid://3kf7vef41iip" path="res://assets/BreakOut Assets.png" id="1_nbyif"]
 [ext_resource type="FontFile" uid="uid://cractp48e1agh" path="res://fonts/Kenney Future.ttf" id="3_wndot"]
 [ext_resource type="PackedScene" uid="uid://37jslufmn432" path="res://scenes/ball.tscn" id="4_m4rf1"]
+[ext_resource type="PackedScene" uid="uid://ccpfcau81k1ro" path="res://scenes/brick.tscn" id="5_bgcv6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a4xf5"]
 texture = ExtResource("1_nbyif")
@@ -362,3 +363,368 @@ shape = SubResource("RectangleShape2D_mjh1p")
 
 [node name="Ball" parent="." instance=ExtResource("4_m4rf1")]
 position = Vector2(450, 300)
+
+[node name="Bricks" type="Node" parent="."]
+
+[node name="Red" type="Node" parent="Bricks"]
+
+[node name="Brick" parent="Bricks/Red" instance=ExtResource("5_bgcv6")]
+position = Vector2(128, 80)
+
+[node name="Brick2" parent="Bricks/Red" instance=ExtResource("5_bgcv6")]
+position = Vector2(48, 80)
+
+[node name="Brick3" parent="Bricks/Red" instance=ExtResource("5_bgcv6")]
+position = Vector2(288, 80)
+
+[node name="Brick4" parent="Bricks/Red" instance=ExtResource("5_bgcv6")]
+position = Vector2(208, 80)
+
+[node name="Brick5" parent="Bricks/Red" instance=ExtResource("5_bgcv6")]
+position = Vector2(448, 80)
+
+[node name="Brick6" parent="Bricks/Red" instance=ExtResource("5_bgcv6")]
+position = Vector2(368, 80)
+
+[node name="Brick7" parent="Bricks/Red" instance=ExtResource("5_bgcv6")]
+position = Vector2(608, 80)
+
+[node name="Brick8" parent="Bricks/Red" instance=ExtResource("5_bgcv6")]
+position = Vector2(528, 80)
+
+[node name="Brick9" parent="Bricks/Red" instance=ExtResource("5_bgcv6")]
+position = Vector2(688, 80)
+
+[node name="Brick10" parent="Bricks/Red" instance=ExtResource("5_bgcv6")]
+position = Vector2(768, 80)
+
+[node name="Brick11" parent="Bricks/Red" instance=ExtResource("5_bgcv6")]
+position = Vector2(848, 80)
+
+[node name="Gray" type="Node" parent="Bricks"]
+
+[node name="Brick" parent="Bricks/Gray" instance=ExtResource("5_bgcv6")]
+position = Vector2(48, 128)
+
+[node name="Sprite2D" parent="Bricks/Gray/Brick" index="1"]
+region_rect = Rect2(0, 48, 16, 8)
+
+[node name="Brick2" parent="Bricks/Gray" instance=ExtResource("5_bgcv6")]
+position = Vector2(128, 128)
+
+[node name="Sprite2D" parent="Bricks/Gray/Brick2" index="1"]
+region_rect = Rect2(0, 48, 16, 8)
+
+[node name="Brick3" parent="Bricks/Gray" instance=ExtResource("5_bgcv6")]
+position = Vector2(208, 128)
+
+[node name="Sprite2D" parent="Bricks/Gray/Brick3" index="1"]
+region_rect = Rect2(0, 48, 16, 8)
+
+[node name="Brick4" parent="Bricks/Gray" instance=ExtResource("5_bgcv6")]
+position = Vector2(288, 128)
+
+[node name="Sprite2D" parent="Bricks/Gray/Brick4" index="1"]
+region_rect = Rect2(0, 48, 16, 8)
+
+[node name="Brick5" parent="Bricks/Gray" instance=ExtResource("5_bgcv6")]
+position = Vector2(368, 128)
+
+[node name="Sprite2D" parent="Bricks/Gray/Brick5" index="1"]
+region_rect = Rect2(0, 48, 16, 8)
+
+[node name="Brick6" parent="Bricks/Gray" instance=ExtResource("5_bgcv6")]
+position = Vector2(448, 128)
+
+[node name="Sprite2D" parent="Bricks/Gray/Brick6" index="1"]
+region_rect = Rect2(0, 48, 16, 8)
+
+[node name="Brick7" parent="Bricks/Gray" instance=ExtResource("5_bgcv6")]
+position = Vector2(528, 128)
+
+[node name="Sprite2D" parent="Bricks/Gray/Brick7" index="1"]
+region_rect = Rect2(0, 48, 16, 8)
+
+[node name="Brick8" parent="Bricks/Gray" instance=ExtResource("5_bgcv6")]
+position = Vector2(608, 128)
+
+[node name="Sprite2D" parent="Bricks/Gray/Brick8" index="1"]
+region_rect = Rect2(0, 48, 16, 8)
+
+[node name="Brick9" parent="Bricks/Gray" instance=ExtResource("5_bgcv6")]
+position = Vector2(688, 128)
+
+[node name="Sprite2D" parent="Bricks/Gray/Brick9" index="1"]
+region_rect = Rect2(0, 48, 16, 8)
+
+[node name="Brick10" parent="Bricks/Gray" instance=ExtResource("5_bgcv6")]
+position = Vector2(768, 128)
+
+[node name="Sprite2D" parent="Bricks/Gray/Brick10" index="1"]
+region_rect = Rect2(0, 48, 16, 8)
+
+[node name="Brick11" parent="Bricks/Gray" instance=ExtResource("5_bgcv6")]
+position = Vector2(848, 128)
+
+[node name="Sprite2D" parent="Bricks/Gray/Brick11" index="1"]
+region_rect = Rect2(0, 48, 16, 8)
+
+[node name="Green" type="Node" parent="Bricks"]
+
+[node name="Brick" parent="Bricks/Green" instance=ExtResource("5_bgcv6")]
+position = Vector2(48, 176)
+
+[node name="Sprite2D" parent="Bricks/Green/Brick" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick2" parent="Bricks/Green" instance=ExtResource("5_bgcv6")]
+position = Vector2(128, 176)
+
+[node name="Sprite2D" parent="Bricks/Green/Brick2" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick3" parent="Bricks/Green" instance=ExtResource("5_bgcv6")]
+position = Vector2(208, 176)
+
+[node name="Sprite2D" parent="Bricks/Green/Brick3" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick4" parent="Bricks/Green" instance=ExtResource("5_bgcv6")]
+position = Vector2(288, 176)
+
+[node name="Sprite2D" parent="Bricks/Green/Brick4" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick5" parent="Bricks/Green" instance=ExtResource("5_bgcv6")]
+position = Vector2(368, 176)
+
+[node name="Sprite2D" parent="Bricks/Green/Brick5" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick6" parent="Bricks/Green" instance=ExtResource("5_bgcv6")]
+position = Vector2(448, 176)
+
+[node name="Sprite2D" parent="Bricks/Green/Brick6" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick7" parent="Bricks/Green" instance=ExtResource("5_bgcv6")]
+position = Vector2(528, 176)
+
+[node name="Sprite2D" parent="Bricks/Green/Brick7" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick8" parent="Bricks/Green" instance=ExtResource("5_bgcv6")]
+position = Vector2(608, 176)
+
+[node name="Sprite2D" parent="Bricks/Green/Brick8" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick9" parent="Bricks/Green" instance=ExtResource("5_bgcv6")]
+position = Vector2(688, 176)
+
+[node name="Sprite2D" parent="Bricks/Green/Brick9" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick10" parent="Bricks/Green" instance=ExtResource("5_bgcv6")]
+position = Vector2(768, 176)
+
+[node name="Sprite2D" parent="Bricks/Green/Brick10" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick11" parent="Bricks/Green" instance=ExtResource("5_bgcv6")]
+position = Vector2(848, 176)
+
+[node name="Sprite2D" parent="Bricks/Green/Brick11" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Orange" type="Node" parent="Bricks"]
+
+[node name="Brick" parent="Bricks/Orange" instance=ExtResource("5_bgcv6")]
+position = Vector2(48, 224)
+
+[node name="Sprite2D" parent="Bricks/Orange/Brick" index="1"]
+region_rect = Rect2(0, 24, 16, 8)
+
+[node name="Brick2" parent="Bricks/Orange" instance=ExtResource("5_bgcv6")]
+position = Vector2(128, 224)
+
+[node name="Sprite2D" parent="Bricks/Orange/Brick2" index="1"]
+region_rect = Rect2(0, 24, 16, 8)
+
+[node name="Brick3" parent="Bricks/Orange" instance=ExtResource("5_bgcv6")]
+position = Vector2(208, 224)
+
+[node name="Sprite2D" parent="Bricks/Orange/Brick3" index="1"]
+region_rect = Rect2(0, 24, 16, 8)
+
+[node name="Brick4" parent="Bricks/Orange" instance=ExtResource("5_bgcv6")]
+position = Vector2(288, 224)
+
+[node name="Sprite2D" parent="Bricks/Orange/Brick4" index="1"]
+region_rect = Rect2(0, 24, 16, 8)
+
+[node name="Brick5" parent="Bricks/Orange" instance=ExtResource("5_bgcv6")]
+position = Vector2(368, 224)
+
+[node name="Sprite2D" parent="Bricks/Orange/Brick5" index="1"]
+region_rect = Rect2(0, 24, 16, 8)
+
+[node name="Brick6" parent="Bricks/Orange" instance=ExtResource("5_bgcv6")]
+position = Vector2(448, 224)
+
+[node name="Sprite2D" parent="Bricks/Orange/Brick6" index="1"]
+region_rect = Rect2(0, 24, 16, 8)
+
+[node name="Brick7" parent="Bricks/Orange" instance=ExtResource("5_bgcv6")]
+position = Vector2(528, 224)
+
+[node name="Sprite2D" parent="Bricks/Orange/Brick7" index="1"]
+region_rect = Rect2(0, 24, 16, 8)
+
+[node name="Brick8" parent="Bricks/Orange" instance=ExtResource("5_bgcv6")]
+position = Vector2(608, 224)
+
+[node name="Sprite2D" parent="Bricks/Orange/Brick8" index="1"]
+region_rect = Rect2(0, 24, 16, 8)
+
+[node name="Brick9" parent="Bricks/Orange" instance=ExtResource("5_bgcv6")]
+position = Vector2(688, 224)
+
+[node name="Sprite2D" parent="Bricks/Orange/Brick9" index="1"]
+region_rect = Rect2(0, 24, 16, 8)
+
+[node name="Brick10" parent="Bricks/Orange" instance=ExtResource("5_bgcv6")]
+position = Vector2(768, 224)
+
+[node name="Sprite2D" parent="Bricks/Orange/Brick10" index="1"]
+region_rect = Rect2(0, 24, 16, 8)
+
+[node name="Brick11" parent="Bricks/Orange" instance=ExtResource("5_bgcv6")]
+position = Vector2(848, 224)
+
+[node name="Sprite2D" parent="Bricks/Orange/Brick11" index="1"]
+region_rect = Rect2(0, 24, 16, 8)
+
+[node name="Yellow" type="Node" parent="Bricks"]
+
+[node name="Brick" parent="Bricks/Yellow" instance=ExtResource("5_bgcv6")]
+position = Vector2(48, 272)
+
+[node name="Sprite2D" parent="Bricks/Yellow/Brick" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick2" parent="Bricks/Yellow" instance=ExtResource("5_bgcv6")]
+position = Vector2(128, 272)
+
+[node name="Sprite2D" parent="Bricks/Yellow/Brick2" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick3" parent="Bricks/Yellow" instance=ExtResource("5_bgcv6")]
+position = Vector2(208, 272)
+
+[node name="Sprite2D" parent="Bricks/Yellow/Brick3" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick4" parent="Bricks/Yellow" instance=ExtResource("5_bgcv6")]
+position = Vector2(288, 272)
+
+[node name="Sprite2D" parent="Bricks/Yellow/Brick4" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick5" parent="Bricks/Yellow" instance=ExtResource("5_bgcv6")]
+position = Vector2(368, 272)
+
+[node name="Sprite2D" parent="Bricks/Yellow/Brick5" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick6" parent="Bricks/Yellow" instance=ExtResource("5_bgcv6")]
+position = Vector2(448, 272)
+
+[node name="Sprite2D" parent="Bricks/Yellow/Brick6" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick7" parent="Bricks/Yellow" instance=ExtResource("5_bgcv6")]
+position = Vector2(528, 272)
+
+[node name="Sprite2D" parent="Bricks/Yellow/Brick7" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick8" parent="Bricks/Yellow" instance=ExtResource("5_bgcv6")]
+position = Vector2(608, 272)
+
+[node name="Sprite2D" parent="Bricks/Yellow/Brick8" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick9" parent="Bricks/Yellow" instance=ExtResource("5_bgcv6")]
+position = Vector2(688, 272)
+
+[node name="Sprite2D" parent="Bricks/Yellow/Brick9" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick10" parent="Bricks/Yellow" instance=ExtResource("5_bgcv6")]
+position = Vector2(768, 272)
+
+[node name="Sprite2D" parent="Bricks/Yellow/Brick10" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[node name="Brick11" parent="Bricks/Yellow" instance=ExtResource("5_bgcv6")]
+position = Vector2(848, 272)
+
+[node name="Sprite2D" parent="Bricks/Yellow/Brick11" index="1"]
+region_rect = Rect2(0, 16, 16, 8)
+
+[editable path="Bricks/Red/Brick"]
+[editable path="Bricks/Red/Brick2"]
+[editable path="Bricks/Red/Brick3"]
+[editable path="Bricks/Red/Brick4"]
+[editable path="Bricks/Red/Brick5"]
+[editable path="Bricks/Red/Brick6"]
+[editable path="Bricks/Red/Brick7"]
+[editable path="Bricks/Red/Brick8"]
+[editable path="Bricks/Red/Brick9"]
+[editable path="Bricks/Red/Brick10"]
+[editable path="Bricks/Red/Brick11"]
+[editable path="Bricks/Gray/Brick"]
+[editable path="Bricks/Gray/Brick2"]
+[editable path="Bricks/Gray/Brick3"]
+[editable path="Bricks/Gray/Brick4"]
+[editable path="Bricks/Gray/Brick5"]
+[editable path="Bricks/Gray/Brick6"]
+[editable path="Bricks/Gray/Brick7"]
+[editable path="Bricks/Gray/Brick8"]
+[editable path="Bricks/Gray/Brick9"]
+[editable path="Bricks/Gray/Brick10"]
+[editable path="Bricks/Gray/Brick11"]
+[editable path="Bricks/Green/Brick"]
+[editable path="Bricks/Green/Brick2"]
+[editable path="Bricks/Green/Brick3"]
+[editable path="Bricks/Green/Brick4"]
+[editable path="Bricks/Green/Brick5"]
+[editable path="Bricks/Green/Brick6"]
+[editable path="Bricks/Green/Brick7"]
+[editable path="Bricks/Green/Brick8"]
+[editable path="Bricks/Green/Brick9"]
+[editable path="Bricks/Green/Brick10"]
+[editable path="Bricks/Green/Brick11"]
+[editable path="Bricks/Orange/Brick"]
+[editable path="Bricks/Orange/Brick2"]
+[editable path="Bricks/Orange/Brick3"]
+[editable path="Bricks/Orange/Brick4"]
+[editable path="Bricks/Orange/Brick5"]
+[editable path="Bricks/Orange/Brick6"]
+[editable path="Bricks/Orange/Brick7"]
+[editable path="Bricks/Orange/Brick8"]
+[editable path="Bricks/Orange/Brick9"]
+[editable path="Bricks/Orange/Brick10"]
+[editable path="Bricks/Orange/Brick11"]
+[editable path="Bricks/Yellow/Brick"]
+[editable path="Bricks/Yellow/Brick2"]
+[editable path="Bricks/Yellow/Brick3"]
+[editable path="Bricks/Yellow/Brick4"]
+[editable path="Bricks/Yellow/Brick5"]
+[editable path="Bricks/Yellow/Brick6"]
+[editable path="Bricks/Yellow/Brick7"]
+[editable path="Bricks/Yellow/Brick8"]
+[editable path="Bricks/Yellow/Brick9"]
+[editable path="Bricks/Yellow/Brick10"]
+[editable path="Bricks/Yellow/Brick11"]
