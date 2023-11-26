@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dr0vownuj1cnf"]
+[gd_scene load_steps=9 format=3 uid="uid://dr0vownuj1cnf"]
 
 [ext_resource type="PackedScene" uid="uid://swrjp0de5tuv" path="res://scenes/padel.tscn" id="1_0btgy"]
 [ext_resource type="Texture2D" uid="uid://3kf7vef41iip" path="res://assets/BreakOut Assets.png" id="1_nbyif"]
 [ext_resource type="FontFile" uid="uid://cractp48e1agh" path="res://fonts/Kenney Future.ttf" id="3_wndot"]
+[ext_resource type="PackedScene" uid="uid://37jslufmn432" path="res://scenes/ball.tscn" id="4_m4rf1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a4xf5"]
 texture = ExtResource("1_nbyif")
@@ -358,3 +359,6 @@ collision_mask = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/RightWall"]
 shape = SubResource("RectangleShape2D_mjh1p")
+
+[node name="Ball" parent="." instance=ExtResource("4_m4rf1")]
+position = Vector2(450, 300)

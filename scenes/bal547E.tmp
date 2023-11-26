@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://37jslufmn432"]
+
+[ext_resource type="Texture2D" uid="uid://3kf7vef41iip" path="res://assets/BreakOut Assets.png" id="1_1toib"]
+[ext_resource type="Script" path="res://scenes/ball.gd" id="1_khvib"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mp8me"]
+bounce = 10.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y571a"]
+radius = 8.0
+
+[node name="Ball" type="RigidBody2D"]
+collision_layer = 8
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_mp8me")
+gravity_scale = 0.0
+script = ExtResource("1_khvib")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1toib")
+region_enabled = true
+region_rect = Rect2(192, 240, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_y571a")
