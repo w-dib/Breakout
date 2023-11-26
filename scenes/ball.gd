@@ -19,3 +19,6 @@ func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		velocity = velocity.bounce(collision.get_normal()) * speed_multiplier 
+		if collision.get_collider().is_in_group("Bricks"):
+			var brick = collision.get_collider()
+			brick.queue_free()
